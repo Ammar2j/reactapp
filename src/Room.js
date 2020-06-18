@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
+import './Room.css';
 
 function Room() {
 
     let [islit,setlit] = useState(true);
     return(
-    <div>
+    <div className = { "room"+(islit? 'lit': 'dark') }>
         the room is {islit? 'lit':'dark'}
         <br/>
         <button onClick = { ()=> setlit(!islit)}>
